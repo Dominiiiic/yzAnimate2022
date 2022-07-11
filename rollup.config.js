@@ -8,18 +8,18 @@ import cssnano from 'cssnano';
 import pkg from './package.json';
 
 const transformStyles = postcss({
-  extract: 'dist/aos.css',
+  extract: 'dist/ya.css',
   plugins: [autoprefixer, cssnano]
 });
 
-const input = 'src/js/aos.js';
+const input = 'src/js/ya.js';
 
 export default [
   {
     input,
     output: {
       file: pkg.browser,
-      name: 'AOS',
+      name: 'YA',
       format: 'umd',
       sourcemap: process.env.NODE_ENV === 'dev'
     },

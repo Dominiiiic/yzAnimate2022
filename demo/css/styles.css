@@ -17,13 +17,13 @@ body {
   background-color: rgba(0,0,0,0.4);
 }
 
-.aos-all {
+.ya-all {
   width: 1000px;
   max-width: 98%;
   margin: 50px auto;
 }
 
-.aos-item {
+.ya-item {
   display: inline-block;
   float: left;
   width: 100%;
@@ -31,7 +31,7 @@ body {
   padding: 20px;
 }
 
-.aos-item::before {
+.ya-item::before {
   content: attr(data-id);
   position: relative;
   width: 100%;
@@ -44,18 +44,18 @@ body {
 }
 
 @media screen and (min-width: 420px) {
-  .aos-item {
+  .ya-item {
     width: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .aos-item {
+  .ya-item {
     width: 33%;
   }
 }
 
-.aos-anchors__lines {
+.ya-anchors__lines {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -65,7 +65,7 @@ body {
   border-bottom: 2px solid red;
 }
 
-.aos-anchors__lines::before {
+.ya-anchors__lines::before {
   content: '';
   width: 100%;
   height: 2px;
@@ -78,23 +78,23 @@ body {
   background: green;
 }
 
-.aos-anchors__sidebar {
+.ya-anchors__sidebar {
   position: fixed;
   left: 0;
   top: 0;
 }
 
-.aos-anchors__sidebar > div {
+.ya-anchors__sidebar > div {
   padding: 5px 10px;
   background: #f1f1f1;
 }
 
-.aos-anchors__content {
+.ya-anchors__content {
   width: 400px;
   margin: 50px auto;
 }
 
-.aos-anchors__content > div {
+.ya-anchors__content > div {
   position: relative;
   width: 100%;
   height: 300px;
@@ -105,7 +105,7 @@ body {
   color: #333;
 }
 
-.aos-anchors__content > div::before {
+.ya-anchors__content > div::before {
   content: '';
   position: absolute;
   left: 0;
@@ -113,34 +113,34 @@ body {
   height: 2px;
 }
 
-.aos-anchors__content > div::after {
+.ya-anchors__content > div::after {
   content: attr(data-anchor-id);
   position: relative;
   background-color: #f1f1f1;
 }
 
-.aos-anchors__content > div[data-placement$="-bottom"]::before {
+.ya-anchors__content > div[data-placement$="-bottom"]::before {
   background-color: red;
 }
 
-.aos-anchors__content > div[data-placement$="-center"]::before {
+.ya-anchors__content > div[data-placement$="-center"]::before {
   background-color: green;
 }
 
-.aos-anchors__content > div[data-placement$="-top"]::before {
+.ya-anchors__content > div[data-placement$="-top"]::before {
   background-color: blue;
 }
 
-.aos-anchors__content > div[data-placement^="top-"]::before {
+.ya-anchors__content > div[data-placement^="top-"]::before {
   top: 0;
 }
 
-.aos-anchors__content > div[data-placement^="center-"]::before {
+.ya-anchors__content > div[data-placement^="center-"]::before {
   top: 0;
   bottom: 0;
   margin: auto;
 }
 
-.aos-anchors__content > div[data-placement^="bottom-"]::before {
+.ya-anchors__content > div[data-placement^="bottom-"]::before {
   bottom: 0;
 }

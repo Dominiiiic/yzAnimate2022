@@ -1,13 +1,13 @@
 {
-  "name": "aos",
+  "name": "ya",
   "version": "3.0.0-beta.6",
   "description": "Animate on scroll library",
   "homepage": "https://michalsnik.github.io/aos/",
   "author": "Michał Sajnóg <michal.sajnog@hotmail.com>",
   "license": "MIT",
-  "main": "dist/aos.cjs.js",
-  "module": "dist/aos.esm.js",
-  "browser": "dist/aos.js",
+  "main": "dist/ya.cjs.js",
+  "module": "dist/ya.esm.js",
+  "browser": "dist/ya.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/michalsnik/aos.git"

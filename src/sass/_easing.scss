@@ -1,4 +1,4 @@
-$aos-easing: (
+$ya-easing: (
   linear: cubic-bezier(.250, .250, .750, .750),
 
   ease: cubic-bezier(.250, .100, .250, 1),
@@ -30,10 +30,10 @@ $aos-easing: (
 // Easings implementations
 // Default timing function: 'ease'
 
-[data-aos] {
-  @each $key, $val in $aos-easing {
-    body[data-aos-easing="#{$key}"] &,
-    &[data-aos][data-aos-easing="#{$key}"] {
+[data-ya] {
+  @each $key, $val in $ya-easing {
+    body[data-ya-easing="#{$key}"] &,
+    &[data-ya][data-ya-easing="#{$key}"] {
       transition-timing-function: $val;
     }
   }

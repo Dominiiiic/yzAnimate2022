@@ -9,7 +9,7 @@ const prepare = function($elements, options) {
     const once = getInlineOption(el.node, 'once', options.once);
     const id = getInlineOption(el.node, 'id');
     const customClassNames =
-      options.useClassNames && el.node.getAttribute('data-aos');
+      options.useClassNames && el.node.getAttribute('data-ya');
 
     const animatedClassNames = [options.animatedClassName]
       .concat(customClassNames ? customClassNames.split(' ') : [])

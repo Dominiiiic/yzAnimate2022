@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>YA - 游族动画库</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../dist/ya.css" />
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="js-scroll-counter scroll-counter"></div>
+    <div class="ya-all">
+      <div data-id="1" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="2" class="ya-item" data-ya="fade-down"></div>
+      <div data-id="3" class="ya-item" data-ya="zoom-out-down"></div>
+      <div data-id="4" class="ya-item" data-ya="flip-down"></div>
+      <div data-id="5" class="ya-item" data-ya="flip-up"></div>
+      <div data-id="6" class="ya-item" data-ya="fade-down"></div>
+      <div data-id="7" class="ya-item" data-ya="fade-in"></div>
+      <div data-id="8" class="ya-item" data-ya="fade-down"></div>
+      <div data-id="9" class="ya-item" data-ya="fade-in"></div>
+      <div data-id="10" class="ya-item" data-ya="fade-down" data-ya-id="super-duper"></div>
+      <div data-id="11" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="12" class="ya-item" data-ya="fade-down"></div>
+      <div data-id="13" class="ya-item" data-ya="fade-in"></div>
+      <div data-id="14" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="15" class="ya-item" data-ya="fade-in"></div>
+      <div data-id="16" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="17" class="ya-item" data-ya="fade-down"></div>
+      <div data-id="18" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="19" class="ya-item" data-ya="zoom-out"></div>
+      <div data-id="20" class="ya-item" data-ya="fade-up"></div>
+      <div data-id="21" class="ya-item" data-ya="zoom-out"></div>
+      <div data-id="22" class="ya-item" data-ya="fade-in"></div>
+      <div data-id="23" class="ya-item" data-ya="zoom-out-up"></div>
+      <div data-id="24" class="ya-item" data-ya="zoom-out-down"></div>
+    </div>
+
+    <script src="../dist/ya.js"></script>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+      if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.js-scroll-counter');
+
+        YA.init({
+          mirror: true,
+        });
+
+        document.addEventListener('ya:in', function(e) {
+          console.log('in!', e.detail);
+        });
+
+        window.addEventListener('scroll', function() {
+          scrollCounter.innerHTML = window.pageYOffset;
+        });
+      }
+    </script>
+  </body>
+</html>

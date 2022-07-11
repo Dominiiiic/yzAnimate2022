@@ -32,7 +32,7 @@ const fireEvent = (eventName, data) => {
 };
 
 /**
- * Set or remove aos-animate class
+ * Set or remove ya-animate class
  * @param {node} el         element
  * @param {int}  top        scrolled distance
  */
@@ -43,10 +43,10 @@ const applyClasses = (el, top) => {
     if (!el.animated) return;
 
     removeClasses(node, options.animatedClassNames);
-    fireEvent('aos:out', node);
+    fireEvent('ya:out', node);
 
     if (el.options.id) {
-      fireEvent(`aos:in:${el.options.id}`, node);
+      fireEvent(`ya:in:${el.options.id}`, node);
     }
 
     el.animated = false;
@@ -57,9 +57,9 @@ const applyClasses = (el, top) => {
 
     addClasses(node, options.animatedClassNames);
 
-    fireEvent('aos:in', node);
+    fireEvent('ya:in', node);
     if (el.options.id) {
-      fireEvent(`aos:in:${el.options.id}`, node);
+      fireEvent(`ya:in:${el.options.id}`, node);
     }
 
     el.animated = true;
@@ -75,7 +75,7 @@ const applyClasses = (el, top) => {
 };
 
 /**
- * Scroll logic - add or remove 'aos-animate' class on scroll
+ * Scroll logic - add or remove 'ya-animate' class on scroll
  *
  * @param  {array} $elements         array of elements nodes
  * @return {void}

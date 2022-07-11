@@ -5,6 +5,6 @@
  */
 
 export default () => {
-  const elements = document.querySelectorAll('[data-aos]');
+  const elements = document.querySelectorAll('[data-ya]');
   return Array.prototype.map.call(elements, node => ({ node }));
 };

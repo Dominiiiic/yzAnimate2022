@@ -1,9 +1,5 @@
-'use strict';
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var throttle = _interopDefault(require('lodash.throttle'));
-var debounce = _interopDefault(require('lodash.debounce'));
+import throttle from 'lodash.throttle';
+import debounce from 'lodash.debounce';
 
 var callback = function callback() {};
 
@@ -192,7 +188,7 @@ var fireEvent = function fireEvent(eventName, data) {
 };
 
 /**
- * Set or remove aos-animate class
+ * Set or remove ya-animate class
  * @param {node} el         element
  * @param {int}  top        scrolled distance
  */
@@ -207,10 +203,10 @@ var applyClasses = function applyClasses(el, top) {
     if (!el.animated) return;
 
     removeClasses(node, options.animatedClassNames);
-    fireEvent('aos:out', node);
+    fireEvent('ya:out', node);
 
     if (el.options.id) {
-      fireEvent('aos:in:' + el.options.id, node);
+      fireEvent('ya:in:' + el.options.id, node);
     }
 
     el.animated = false;
@@ -221,9 +217,9 @@ var applyClasses = function applyClasses(el, top) {
 
     addClasses(node, options.animatedClassNames);
 
-    fireEvent('aos:in', node);
+    fireEvent('ya:in', node);
     if (el.options.id) {
-      fireEvent('aos:in:' + el.options.id, node);
+      fireEvent('ya:in:' + el.options.id, node);
     }
 
     el.animated = true;
@@ -239,7 +235,7 @@ var applyClasses = function applyClasses(el, top) {
 };
 
 /**
- * Scroll logic - add or remove 'aos-animate' class on scroll
+ * Scroll logic - add or remove 'ya-animate' class on scroll
  *
  * @param  {array} $elements         array of elements nodes
  * @return {void}
@@ -283,7 +279,7 @@ var offset = function offset(el) {
  */
 
 var getInlineOption = (function (el, key, fallback) {
-  var attr = el.getAttribute('data-aos-' + key);
+  var attr = el.getAttribute('data-ya-' + key);
 
   if (typeof attr !== 'undefined') {
     if (attr === 'true') {
@@ -375,7 +371,7 @@ var prepare = function prepare($elements, options) {
     var mirror = getInlineOption(el.node, 'mirror', options.mirror);
     var once = getInlineOption(el.node, 'once', options.once);
     var id = getInlineOption(el.node, 'id');
-    var customClassNames = options.useClassNames && el.node.getAttribute('data-aos');
+    var customClassNames = options.useClassNames && el.node.getAttribute('data-ya');
 
     var animatedClassNames = [options.animatedClassName].concat(customClassNames ? customClassNames.split(' ') : []).filter(function (className) {
       return typeof className === 'string';
@@ -408,7 +404,7 @@ var prepare = function prepare($elements, options) {
  */
 
 var elements = (function () {
-  var elements = document.querySelectorAll('[data-aos]');
+  var elements = document.querySelectorAll('[data-ya]');
   return Array.prototype.map.call(elements, function (node) {
     return { node: node };
   });
@@ -430,7 +426,7 @@ var domList = {
 
 /**
  * *******************************************************
- * AOS (Animate on scroll) - wowjs alternative
+ * YA (Animate on scroll) - wowjs alternative
  * made to animate elements on scroll in both directions
  * *******************************************************
  */
@@ -515,10 +511,10 @@ var refreshHard = function refreshHard() {
  */
 var disable = function disable() {
   $aosElements.forEach(function (el, i) {
-    el.node.removeAttribute('data-aos');
-    el.node.removeAttribute('data-aos-easing');
-    el.node.removeAttribute('data-aos-duration');
-    el.node.removeAttribute('data-aos-delay');
+    el.node.removeAttribute('data-ya');
+    el.node.removeAttribute('data-ya-easing');
+    el.node.removeAttribute('data-ya-duration');
+    el.node.removeAttribute('data-ya-delay');
 
     if (options.initClassName) {
       el.node.classList.remove(options.initClassName);
@@ -567,7 +563,7 @@ var init = function init(settings) {
    * it'll refresh plugin automatically
    */
   if (!options.disableMutationObserver) {
-    observer.ready('[data-aos]', refreshHard);
+    observer.ready('[data-ya]', refreshHard);
   }
 
   /**
@@ -582,11 +578,11 @@ var init = function init(settings) {
    * Set global settings on body, based on options
    * so CSS can use it
    */
-  document.querySelector('body').setAttribute('data-aos-easing', options.easing);
+  document.querySelector('body').setAttribute('data-ya-easing', options.easing);
 
-  document.querySelector('body').setAttribute('data-aos-duration', options.duration);
+  document.querySelector('body').setAttribute('data-ya-duration', options.duration);
 
-  document.querySelector('body').setAttribute('data-aos-delay', options.delay);
+  document.querySelector('body').setAttribute('data-ya-delay', options.delay);
 
   /**
    * Handle initializing
@@ -664,10 +660,10 @@ function hasClass(elem, className) {
  * Export Public API
  */
 
-var aos = {
+var ya = {
   init: init,
   refresh: refresh,
   refreshHard: refreshHard
 };
 
-module.exports = aos;
+export default ya;

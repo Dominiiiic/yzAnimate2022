@@ -1,6 +1,6 @@
 /**
  * *******************************************************
- * AOS (Animate on scroll) - wowjs alternative
+ * YA (Animate on scroll) - wowjs alternative
  * made to animate elements on scroll in both directions
  * *******************************************************
  */
@@ -98,10 +98,10 @@ const refreshHard = function refreshHard() {
  */
 const disable = function() {
   $aosElements.forEach(function(el, i) {
-    el.node.removeAttribute('data-aos');
-    el.node.removeAttribute('data-aos-easing');
-    el.node.removeAttribute('data-aos-duration');
-    el.node.removeAttribute('data-aos-delay');
+    el.node.removeAttribute('data-ya');
+    el.node.removeAttribute('data-ya-easing');
+    el.node.removeAttribute('data-ya-duration');
+    el.node.removeAttribute('data-ya-delay');
 
     if (options.initClassName) {
       el.node.classList.remove(options.initClassName);
@@ -160,7 +160,7 @@ const init = function init(settings) {
    * it'll refresh plugin automatically
    */
   if (!options.disableMutationObserver) {
-    observer.ready('[data-aos]', refreshHard);
+    observer.ready('[data-ya]', refreshHard);
   }
 
   /**
@@ -177,13 +177,13 @@ const init = function init(settings) {
    */
   document
     .querySelector('body')
-    .setAttribute('data-aos-easing', options.easing);
+    .setAttribute('data-ya-easing', options.easing);
 
   document
     .querySelector('body')
-    .setAttribute('data-aos-duration', options.duration);
+    .setAttribute('data-ya-duration', options.duration);
 
-  document.querySelector('body').setAttribute('data-aos-delay', options.delay);
+  document.querySelector('body').setAttribute('data-ya-delay', options.delay);
 
   /**
    * Handle initializing

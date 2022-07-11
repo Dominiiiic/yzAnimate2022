@@ -1,25 +1,25 @@
 // Generate Duration && Delay
-[data-aos] {
+[data-ya] {
   @for $i from 1 through 60 {
-    body[data-aos-duration='#{$i * 50}'] &,
-    &[data-aos][data-aos-duration='#{$i * 50}'] {
+    body[data-ya-duration='#{$i * 50}'] &,
+    &[data-ya][data-ya-duration='#{$i * 50}'] {
       transition-duration: #{$i * 50}ms;
     }
 
-    body[data-aos-delay='#{$i * 50}'] &,
-    &[data-aos][data-aos-delay='#{$i * 50}'] {
+    body[data-ya-delay='#{$i * 50}'] &,
+    &[data-ya][data-ya-delay='#{$i * 50}'] {
       transition-delay: 0s;
 
-      &.aos-animate {
+      &.ya-animate {
         transition-delay: #{$i * 50}ms;
       }
     }
   }
 }
 
-[data-aos] {
+[data-ya] {
   pointer-events: none;
-  &.aos-animate {
+  &.ya-animate {
     pointer-events: auto;
   }
 }

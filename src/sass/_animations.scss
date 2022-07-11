@@ -1,5 +1,5 @@
 // Animations variables
-$aos-distance: 100px !default;
+$ya-distance: 100px !default;
 
 @media screen {
   html:not(.no-js) {
@@ -10,46 +10,46 @@ $aos-distance: 100px !default;
     * fade-up-right, fade-up-left, fade-down-right, fade-down-left
     */
 
-    [data-aos^='fade'][data-aos^='fade'] {
+    [data-ya^='fade'][data-ya^='fade'] {
       opacity: 0;
       transition-property: opacity, transform;
 
-      &.aos-animate {
+      &.ya-animate {
         opacity: 1;
         transform: none;
       }
     }
 
-    [data-aos='fade-up'] {
-      transform: translate3d(0, $aos-distance, 0);
+    [data-ya='fade-up'] {
+      transform: translate3d(0, $ya-distance, 0);
     }
 
-    [data-aos='fade-down'] {
-      transform: translate3d(0, -$aos-distance, 0);
+    [data-ya='fade-down'] {
+      transform: translate3d(0, -$ya-distance, 0);
     }
 
-    [data-aos='fade-right'] {
-      transform: translate3d(-$aos-distance, 0, 0);
+    [data-ya='fade-right'] {
+      transform: translate3d(-$ya-distance, 0, 0);
     }
 
-    [data-aos='fade-left'] {
-      transform: translate3d($aos-distance, 0, 0);
+    [data-ya='fade-left'] {
+      transform: translate3d($ya-distance, 0, 0);
     }
 
-    [data-aos='fade-up-right'] {
-      transform: translate3d(-$aos-distance, $aos-distance, 0);
+    [data-ya='fade-up-right'] {
+      transform: translate3d(-$ya-distance, $ya-distance, 0);
     }
 
-    [data-aos='fade-up-left'] {
-      transform: translate3d($aos-distance, $aos-distance, 0);
+    [data-ya='fade-up-left'] {
+      transform: translate3d($ya-distance, $ya-distance, 0);
     }
 
-    [data-aos='fade-down-right'] {
-      transform: translate3d(-$aos-distance, -$aos-distance, 0);
+    [data-ya='fade-down-right'] {
+      transform: translate3d(-$ya-distance, -$ya-distance, 0);
     }
 
-    [data-aos='fade-down-left'] {
-      transform: translate3d($aos-distance, -$aos-distance, 0);
+    [data-ya='fade-down-left'] {
+      transform: translate3d($ya-distance, -$ya-distance, 0);
     }
 
 
@@ -61,54 +61,54 @@ $aos-distance: 100px !default;
     * zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
     */
 
-    [data-aos^='zoom'][data-aos^='zoom'] {
+    [data-ya^='zoom'][data-ya^='zoom'] {
       opacity: 0;
       transition-property: opacity, transform;
 
-      &.aos-animate {
+      &.ya-animate {
         opacity: 1;
         transform: translate3d(0, 0, 0) scale(1);
       }
     }
 
-    [data-aos='zoom-in'] {
+    [data-ya='zoom-in'] {
       transform: scale(.6);
     }
 
-    [data-aos='zoom-in-up'] {
-      transform: translate3d(0, $aos-distance, 0) scale(.6);
+    [data-ya='zoom-in-up'] {
+      transform: translate3d(0, $ya-distance, 0) scale(.6);
     }
 
-    [data-aos='zoom-in-down'] {
-      transform: translate3d(0, -$aos-distance, 0) scale(.6);
+    [data-ya='zoom-in-down'] {
+      transform: translate3d(0, -$ya-distance, 0) scale(.6);
     }
 
-    [data-aos='zoom-in-right'] {
-      transform: translate3d(-$aos-distance, 0, 0) scale(.6);
+    [data-ya='zoom-in-right'] {
+      transform: translate3d(-$ya-distance, 0, 0) scale(.6);
     }
 
-    [data-aos='zoom-in-left'] {
-      transform: translate3d($aos-distance, 0, 0) scale(.6);
+    [data-ya='zoom-in-left'] {
+      transform: translate3d($ya-distance, 0, 0) scale(.6);
     }
 
-    [data-aos='zoom-out'] {
+    [data-ya='zoom-out'] {
       transform: scale(1.2);
     }
 
-    [data-aos='zoom-out-up'] {
-      transform: translate3d(0, $aos-distance, 0) scale(1.2);
+    [data-ya='zoom-out-up'] {
+      transform: translate3d(0, $ya-distance, 0) scale(1.2);
     }
 
-    [data-aos='zoom-out-down'] {
-      transform: translate3d(0, -$aos-distance, 0) scale(1.2);
+    [data-ya='zoom-out-down'] {
+      transform: translate3d(0, -$ya-distance, 0) scale(1.2);
     }
 
-    [data-aos='zoom-out-right'] {
-      transform: translate3d(-$aos-distance, 0, 0) scale(1.2);
+    [data-ya='zoom-out-right'] {
+      transform: translate3d(-$ya-distance, 0, 0) scale(1.2);
     }
 
-    [data-aos='zoom-out-left'] {
-      transform: translate3d($aos-distance, 0, 0) scale(1.2);
+    [data-ya='zoom-out-left'] {
+      transform: translate3d($ya-distance, 0, 0) scale(1.2);
     }
 
 
@@ -118,29 +118,29 @@ $aos-distance: 100px !default;
     * Slide animations
     */
 
-    [data-aos^='slide'][data-aos^='slide'] {
+    [data-ya^='slide'][data-ya^='slide'] {
       transition-property: transform;
       visibility: hidden;
 
-      &.aos-animate {
+      &.ya-animate {
         visibility: visible;
         transform: translate3d(0, 0, 0);
       }
     }
 
-    [data-aos='slide-up'] {
+    [data-ya='slide-up'] {
       transform: translate3d(0, 100%, 0);
     }
 
-    [data-aos='slide-down'] {
+    [data-ya='slide-down'] {
       transform: translate3d(0, -100%, 0);
     }
 
-    [data-aos='slide-right'] {
+    [data-ya='slide-right'] {
       transform: translate3d(-100%, 0, 0);
     }
 
-    [data-aos='slide-left'] {
+    [data-ya='slide-left'] {
       transform: translate3d(100%, 0, 0);
     }
 
@@ -152,29 +152,29 @@ $aos-distance: 100px !default;
     * flip-left, flip-right, flip-up, flip-down
     */
 
-    [data-aos^='flip'][data-aos^='flip'] {
+    [data-ya^='flip'][data-ya^='flip'] {
       backface-visibility: hidden;
       transition-property: transform;
     }
 
-    [data-aos='flip-left'] {
+    [data-ya='flip-left'] {
       transform: perspective(2500px) rotateY(-100deg);
-      &.aos-animate {transform: perspective(2500px) rotateY(0);}
+      &.ya-animate {transform: perspective(2500px) rotateY(0);}
     }
 
-    [data-aos='flip-right'] {
+    [data-ya='flip-right'] {
       transform: perspective(2500px) rotateY(100deg);
-      &.aos-animate {transform: perspective(2500px) rotateY(0);}
+      &.ya-animate {transform: perspective(2500px) rotateY(0);}
     }
 
-    [data-aos='flip-up'] {
+    [data-ya='flip-up'] {
       transform: perspective(2500px) rotateX(-100deg);
-      &.aos-animate {transform: perspective(2500px) rotateX(0);}
+      &.ya-animate {transform: perspective(2500px) rotateX(0);}
     }
 
-    [data-aos='flip-down'] {
+    [data-ya='flip-down'] {
       transform: perspective(2500px) rotateX(100deg);
-      &.aos-animate {transform: perspective(2500px) rotateX(0);}
+      &.ya-animate {transform: perspective(2500px) rotateX(0);}
     }
   }
 }
