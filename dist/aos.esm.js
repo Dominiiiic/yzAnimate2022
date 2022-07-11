@@ -625,6 +625,11 @@ var init = function init(settings) {
 };
 
 // 获取页面里所有class为animateJs的元素
+if (!Array.from) {
+  Array.from = function (el) {
+    return Array.apply(this, el);
+  };
+}
 var animateJsList = Array.from(document.getElementsByClassName('animateJs')); // 获取class为animateJs的元素
 
 // 遍历有class为animateJs的dom
