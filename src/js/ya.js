@@ -22,7 +22,7 @@ import domList from './helpers/domList';
 /**
  * Private variables
  */
-let $aosElements = [];
+let $yaElements = [];
 let initialized = false;
 
 /**
@@ -38,8 +38,8 @@ let options = {
   mirror: false,
   anchorPlacement: 'top-bottom',
   startEvent: 'DOMContentLoaded',
-  animatedClassName: 'aos-animate',
-  initClassName: 'aos-init',
+  animatedClassName: 'animated',
+  initClassName: 'ya-init',
   useClassNames: false,
   disableMutationObserver: false,
   throttleDelay: 99,
@@ -51,10 +51,10 @@ let options = {
 const isBrowserNotSupported = () => document.all && !window.atob;
 
 const initializeScroll = function initializeScroll() {
-  // Extend elements objects in $aosElements with their positions
-  $aosElements = prepare($aosElements, options);
+  // Extend elements objects in $yaElements with their positions
+  $yaElements = prepare($yaElements, options);
   // Perform scroll event, to refresh view and show/hide elements
-  handleScroll($aosElements);
+  handleScroll($yaElements);
 
   /**
    * Handle scroll event to animate elements on scroll
@@ -62,11 +62,11 @@ const initializeScroll = function initializeScroll() {
   window.addEventListener(
     'scroll',
     throttle(() => {
-      handleScroll($aosElements, options.once);
+      handleScroll($yaElements, options.once);
     }, options.throttleDelay)
   );
 
-  return $aosElements;
+  return $yaElements;
 };
 
 /**
@@ -83,7 +83,7 @@ const refresh = function refresh(initialize = false) {
  * create array with new elements and trigger refresh 使用新元素创建数组并触发刷新
  */
 const refreshHard = function refreshHard() {
-  $aosElements = elements();
+  $yaElements = elements();
 
   if (isDisabled(options.disable) || isBrowserNotSupported()) {
     return disable();
@@ -97,7 +97,7 @@ const refreshHard = function refreshHard() {
  * Remove all attributes to reset applied styles
  */
 const disable = function() {
-  $aosElements.forEach(function(el, i) {
+  $yaElements.forEach(function(el, i) {
     el.node.removeAttribute('data-ya');
     el.node.removeAttribute('data-ya-easing');
     el.node.removeAttribute('data-ya-duration');
@@ -140,7 +140,7 @@ const init = function init(settings) {
   console.log(options)
 
   // Create initial array with elements -> to be fullfilled later with prepare()
-  $aosElements = elements();
+  $yaElements = elements();
 
   /**
    * Disable mutation observing if not supported

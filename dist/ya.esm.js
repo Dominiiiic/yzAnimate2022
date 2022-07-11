@@ -434,7 +434,7 @@ var domList = {
 /**
  * Private variables
  */
-var $aosElements = [];
+var $yaElements = [];
 var initialized = false;
 
 /**
@@ -450,8 +450,8 @@ var options = {
   mirror: false,
   anchorPlacement: 'top-bottom',
   startEvent: 'DOMContentLoaded',
-  animatedClassName: 'aos-animate',
-  initClassName: 'aos-init',
+  animatedClassName: 'animated',
+  initClassName: 'ya-init',
   useClassNames: false,
   disableMutationObserver: false,
   throttleDelay: 99,
@@ -465,19 +465,19 @@ var isBrowserNotSupported = function isBrowserNotSupported() {
 };
 
 var initializeScroll = function initializeScroll() {
-  // Extend elements objects in $aosElements with their positions
-  $aosElements = prepare($aosElements, options);
+  // Extend elements objects in $yaElements with their positions
+  $yaElements = prepare($yaElements, options);
   // Perform scroll event, to refresh view and show/hide elements
-  handleScroll($aosElements);
+  handleScroll($yaElements);
 
   /**
    * Handle scroll event to animate elements on scroll
    */
   window.addEventListener('scroll', throttle(function () {
-    handleScroll($aosElements, options.once);
+    handleScroll($yaElements, options.once);
   }, options.throttleDelay));
 
-  return $aosElements;
+  return $yaElements;
 };
 
 /**
@@ -496,7 +496,7 @@ var refresh = function refresh() {
  * create array with new elements and trigger refresh 使用新元素创建数组并触发刷新
  */
 var refreshHard = function refreshHard() {
-  $aosElements = elements();
+  $yaElements = elements();
 
   if (isDisabled(options.disable) || isBrowserNotSupported()) {
     return disable();
@@ -510,7 +510,7 @@ var refreshHard = function refreshHard() {
  * Remove all attributes to reset applied styles
  */
 var disable = function disable() {
-  $aosElements.forEach(function (el, i) {
+  $yaElements.forEach(function (el, i) {
     el.node.removeAttribute('data-ya');
     el.node.removeAttribute('data-ya-easing');
     el.node.removeAttribute('data-ya-duration');
@@ -547,7 +547,7 @@ var init = function init(settings) {
   console.log(options);
 
   // Create initial array with elements -> to be fullfilled later with prepare()
-  $aosElements = elements();
+  $yaElements = elements();
 
   /**
    * Disable mutation observing if not supported
