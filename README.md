@@ -23,9 +23,9 @@ yarn dev //运行
 [ya.css（已压缩）](https://dominiiiic.github.io/yzAnimate2022/dist/ya.css)
 
 ## Demo
-[Demo(使用现成的模板动画&animate.css)](https://dominiiiic.github.io/yzAnimate2022/demo/)
+[Demo](https://dominiiiic.github.io/yzAnimate2022/demo/)
 
-[Demo(使用ya.css)](https://dominiiiic.github.io/yzAnimate2022/demo/ya.html)
+<!-- [Demo(使用ya.css)](https://dominiiiic.github.io/yzAnimate2022/demo/ya.html) -->
 
 ## 一、使用模板动画（需要引入animate.css和ya.js）
 如果想使用现成的模板动画，需要添加class：animateJs和动画名（如animateLoading1、animateLoading2）
