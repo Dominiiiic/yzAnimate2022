@@ -20,7 +20,7 @@ yarn dev //运行
 
 [animate.min.css（压缩）](https://dominiiiic.github.io/yzAnimate2022/demo/css/animate.min.css)
 
-[ya.css（已压缩）](https://dominiiiic.github.io/yzAnimate2022/dist/ya.css)
+<!-- [ya.css（已压缩）](https://dominiiiic.github.io/yzAnimate2022/dist/ya.css) -->
 
 ## Demo
 [Demo](https://dominiiiic.github.io/yzAnimate2022/demo/)
