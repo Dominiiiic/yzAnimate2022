@@ -15,28 +15,35 @@
 
     <!-- 自己的动画部分 -->
     <h3>模板动画</h3>
-    <div data-id="" class="animate-item animateJs animateLoading1"><p class="animate-tips">加载效果：animateLoading1</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading2"><p class="animate-tips">加载效果：animateLoading2</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading3"><p class="animate-tips">加载效果：animateLoading3</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading4"><p class="animate-tips">加载效果：animateLoading4</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading5"><p class="animate-tips">加载效果：animateLoading5</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading6"><p class="animate-tips">加载效果：animateLoading6</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading7"><p class="animate-tips">加载效果：animateLoading7</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading8"><p class="animate-tips">加载效果：animateLoading8</p></div>
-    <div data-id="" class="animate-item animateJs animateLoading9"><p class="animate-tips">加载效果：animateLoading9</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading1"><p class="animate-tips">加载效果：animateLoading1</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading2"><p class="animate-tips">加载效果：animateLoading2</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading3"><p class="animate-tips">加载效果：animateLoading3</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading4"><p class="animate-tips">加载效果：animateLoading4</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading5"><p class="animate-tips">加载效果：animateLoading5</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading6"><p class="animate-tips">加载效果：animateLoading6</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading7"><p class="animate-tips">加载效果：animateLoading7</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading8"><p class="animate-tips">加载效果：animateLoading8</p></div>
+    <div data-id="" class="animate-item mould animateJs animateLoading9"><p class="animate-tips">加载效果：animateLoading9</p></div>
 
     <h3>自定义动画</h3>
     <div data-id="故障效果（慢）" class="animate-item infinite" data-ya="faultJitterSlow">faultJitterSlow</div>
     <div data-id="故障效果（快）" class="animate-item infinite" data-ya="faultJitterFast">faultJitterFast</div>
+
+    <div data-id="故障效果叠加" class="fault animate-item">
+      <div class="con infinite" data-ya="faultJitterSlow"></div>
+      <div class="con infinite" data-ya="faultJitterFast"></div>
+      (需要2个相同的dom结构叠加使用，具体查看html结构)
+    </div>
+
     <div data-id="惯性进场效果（从右往左）" class="animate-item" data-ya="powerSprintRight">powerSprintRight</div>
     <div data-id="惯性进场效果（从左往右）" class="animate-item" data-ya="powerSprintLeft">powerSprintLeft</div>
 
-    <div data-id="故障线条效果" class="line animate-item">
-      (需要四个相同的dom结构叠加使用，具体查看html结构)
+    <div data-id="故障线条效果" class="fault animate-item">
       <div class="con"></div>
       <div class="con" data-ya="faultJitterLine1"></div>
       <div class="con" data-ya="faultJitterLine2"></div>
       <div class="con" data-ya="faultJitterLine3"></div>
+      (需要4个相同的dom结构叠加使用，具体查看html结构)
     </div>
 
     <!-- animate提供的动画 -->
@@ -213,14 +220,18 @@
       text-align: center;
       color: #fff;
       font-size: 18px;
-      z-index: 10;
+      z-index: 5;
+    }
+    
+    .animate-item.mould::before {
+      z-index: 0;
     }
 
-    .animate-item.line::before {
+    .animate-item.fault::before {
       background: none;
     }
     
-    .animate-item.line .con {
+    .animate-item.fault .con {
       width: calc(100% - 40px);
       height: 260px;
       position: absolute;
