@@ -31,6 +31,14 @@
     <div data-id="惯性进场效果（从右往左）" class="animate-item" data-ya="powerSprintRight">powerSprintRight</div>
     <div data-id="惯性进场效果（从左往右）" class="animate-item" data-ya="powerSprintLeft">powerSprintLeft</div>
 
+    <div data-id="故障线条效果" class="line animate-item">
+      (需要四个相同的dom结构叠加使用，具体查看html结构)
+      <div class="con"></div>
+      <div class="con" data-ya="faultJitterLine1"></div>
+      <div class="con" data-ya="faultJitterLine2"></div>
+      <div class="con" data-ya="faultJitterLine3"></div>
+    </div>
+
     <!-- animate提供的动画 -->
     <h3>animate.css原有动画</h3>
     <div data-id="1" class="animate-item" data-ya="fadeIn">fadeIn</div>
@@ -205,6 +213,20 @@
       text-align: center;
       color: #fff;
       font-size: 18px;
+      z-index: 10;
+    }
+
+    .animate-item.line::before {
+      background: none;
+    }
+    
+    .animate-item.line .con {
+      width: calc(100% - 40px);
+      height: 260px;
+      position: absolute;
+      top: 20px;
+      background: url(./images/faultJitter.png) no-repeat center;
+      background-size: cover;
     }
 
     .animate-tips {

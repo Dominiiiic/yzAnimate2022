@@ -4260,6 +4260,287 @@
   -webkit-animation-name: faultJitterFast;
   animation-name: faultJitterFast;
 }
+/* 故障线条效果1 */
+@-webkit-keyframes faultJitterLine1 {
+  0% {
+    -webkit-clip-path: inset(-1% 0 100% 0);
+    clip-path: inset(-1% 0 100% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  20% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  21% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  22% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  23% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  40% {
+    -webkit-clip-path: inset(50% 0 49% 0);
+    clip-path: inset(50% 0 49% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    -webkit-clip-path: inset(60% 0 39% 0);
+    clip-path: inset(60% 0 39% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  71% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  72% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  73% {
+    -webkit-clip-path: inset(60% 0 39% 0);
+    clip-path: inset(60% 0 39% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    -webkit-clip-path: inset(100% 0 -1% 0);
+    clip-path: inset(100% 0 -1% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes faultJitterLine1 {
+  0% {
+    -webkit-clip-path: inset(-1% 0 100% 0);
+    clip-path: inset(-1% 0 100% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  20% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  21% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  22% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  23% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  40% {
+    -webkit-clip-path: inset(50% 0 49% 0);
+    clip-path: inset(50% 0 49% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-clip-path: inset(30% 0 69% 0);
+    clip-path: inset(30% 0 69% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    -webkit-clip-path: inset(60% 0 39% 0);
+    clip-path: inset(60% 0 39% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  71% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  72% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  73% {
+    -webkit-clip-path: inset(60% 0 39% 0);
+    clip-path: inset(60% 0 39% 0);
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    -webkit-clip-path: inset(100% 0 -1% 0);
+    clip-path: inset(100% 0 -1% 0);
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+}
+.faultJitterLine1 {
+  -webkit-clip-path: inset(-3% 0 100% 0);
+  clip-path: inset(-3% 0 100% 0);
+  mix-blend-mode: hard-light;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation: faultJitterLine1 5s linear infinite;
+  animation: faultJitterLine1 5s linear infinite;
+  opacity: 0.7;
+}
+/* 故障线条效果2 */
+@-webkit-keyframes faultJitterLine2 {
+  0% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  20% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  21% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  22% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  23% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  40% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  71% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  72% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  73% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes faultJitterLine2 {
+  0% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  20% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  21% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  22% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  23% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  40% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+  71% {
+    -webkit-transform: translateX(10px) scale(1.02);
+    transform: translateX(10px) scale(1.02);
+  }
+  72% {
+    -webkit-transform: translateX(-10px) scale(1.02);
+    transform: translateX(-10px) scale(1.02);
+  }
+  73% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(0px) scale(1);
+    transform: translateX(0px) scale(1);
+  }
+}
+.faultJitterLine2 {
+  -webkit-clip-path: polygon(
+    101% 10%,
+    -1% 10%,
+    -1% 13%,
+    101% 13%,
+    101% 76%,
+    -1% 76%,
+    -1% 82%,
+    101% 82%,
+    101% 10%
+  );
+  clip-path: polygon(
+    101% 10%,
+    -1% 10%,
+    -1% 13%,
+    101% 13%,
+    101% 76%,
+    -1% 76%,
+    -1% 82%,
+    101% 82%,
+    101% 10%
+  );
+  -webkit-animation: faultJitterLine2 5s linear infinite;
+  animation: faultJitterLine2 5s linear infinite;
+  opacity: 4;
+}
+.faultJitterLine3 {
+  -webkit-clip-path: polygon(101% 45%, -1% 45%, -1% 48%, 101% 48%);
+  clip-path: polygon(101% 45%, -1% 45%, -1% 48%, 101% 48%);
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  -webkit-animation: faultJitterLine2 5s infinite reverse;
+  animation: faultJitterLine2 5s infinite reverse;
+  opacity: 0.7;
+}
 /* 从左到右惯性 */
 @-webkit-keyframes powerSprintLeft {
   0% {
